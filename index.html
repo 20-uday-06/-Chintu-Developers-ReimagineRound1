@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCDonalds</title>
-    <script src="script.js"></script>
+
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
+    <!-- <div id="cursor"></div>
+    <div id="blur1"></div>
+    <div id="blur2"></div>
+    <div id="blur3"></div>
+    <div id="blur4"></div>
+    <div id="blur5"></div> -->
+
     <nav id="nav">
+        <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+
         <div id="logo">
             <img src="https://www.mcdonalds.com/content/dam/sites/usa/nfl/icons/arches-logo_108x108.jpg" alt="">
         </div>
-        <div id="nav-links">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Offers</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
+        <div class="nav-wrapper">
+            <nav>
+                <a href="#" class="hover-this"><span>Home</span></a>
+                <a href="#" class="hover-this"><span>Service</span></a>
+                <a href="#" class="hover-this"><span>Offers</span></a>
+                <a href="#" class="hover-this"><span>About</span></a>
+                <a href="#" class="hover-this"><span>Contact</span></a> 
+                <div class="cursor"></div>
+            </nav>
         </div>
         <!-- <div class="sb">
             <input class="search-i" type="text" name="" placeholder="Search">
@@ -53,7 +64,8 @@
     <div id="circle">
         <div id="c1">
             <div id="img">
-                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png" alt="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/v1674029845/PC_Creative%20refresh/3D_bau/banners_new/Burger.png"
+                    alt="">
             </div>
         </div>
         <div id="c2"></div>
@@ -62,5 +74,13 @@
         <div id="c5"></div>
         <div id="c6"></div>
     </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+        integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+        integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+
 </html>
