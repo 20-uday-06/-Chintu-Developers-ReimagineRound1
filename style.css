@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,6 +18,53 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+/* .sb {
+    position: relative;
+    top: 20px;
+    left: 180px;
+    transform: translate(-50%, -50%);
+    background: black;
+    height: 50px;
+    border-radius: 50px;
+    /* padding: px; */
+ */
+
+/* .search-bt {
+    color: white;
+    float: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+} */
+
+/* .fa-search {
+    background: black;
+    font-size: 24px;
+}
+
+.search-i {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 50px;
+    width: 0;
+} */
+
+/* .sb:hover>.search-i {
+    width: 250px;
+    padding: 0 7px;
+} */
 
 #logo {
     margin-right: 20px;
@@ -63,7 +109,8 @@ body {
 #menu-toggle {
     display: none;
 }
-#name{
+
+#name {
     /* background-color: blue; */
     height: 110px;
     width: 100%;
@@ -72,13 +119,16 @@ body {
     justify-content: center; */
     text-align: center;
 }
+
 #name h1 {
-    font-size: 60px; 
-  }
-#name p{
+    font-size: 60px;
+}
+
+#name p {
     font-size: 20px;
 }
-#Restaurant{
+
+#Restaurant {
     /* background-color: aqua; */
     height: 37px;
     width: 100%;
@@ -86,12 +136,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #search-box {
-    padding: 10px 200px; 
-    border: 2px solid #ccc; 
-    border-radius: 50px; 
-    background-color: #f9f9f9; 
-    transition: all 0.3s ease; 
+    padding: 10px 200px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
 }
 
 #search-box::placeholder {
@@ -102,14 +153,17 @@ body {
 #search-box:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    border-color: #007bff; /* Highlight border on focus */
+    border-color: #007bff;
+    /* Highlight border on focus */
 }
 
 #search-box:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    background-color: #fff; /* Slightly lighter background on hover */
+    background-color: #fff;
+    /* Slightly lighter background on hover */
 }
-#circle{
+
+#circle {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,69 +173,88 @@ body {
     padding-top: 100px;
 
 }
+
 #c1 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #ccc;
     margin: 20px auto;
-    border: 1px solid #666; /* add a border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a shadow */
+    border: 1px solid #666;
+    /* add a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* add a shadow */
     position: relative;
 }
-  #c1 img{
+
+#c1 img {
     position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    
-  }
-  #c2{
+
+}
+
+#c2 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #ccc;
     margin: 20px auto;
-    border: 1px solid #666; /* add a border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a shadow */
-  }
-  #c3 {
+    border: 1px solid #666;
+    /* add a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* add a shadow */
+}
+
+#c3 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #ccc;
     margin: 20px auto;
-    border: 1px solid #666; /* add a border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a shadow */
-  }
-  #c4 {
+    border: 1px solid #666;
+    /* add a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* add a shadow */
+}
+
+#c4 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #ccc;
     margin: 20px auto;
-    border: 1px solid #666; /* add a border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a shadow */
-  }
-  #c5 {
+    border: 1px solid #666;
+    /* add a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* add a shadow */
+}
+
+#c5 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #ccc;
     margin: 20px auto;
-    border: 1px solid #666; /* add a border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a shadow */
-  }
-  #c6 {
+    border: 1px solid #666;
+    /* add a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* add a shadow */
+}
+
+#c6 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #ccc;
     margin: 20px auto;
-    border: 1px solid #666; /* add a border */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add a shadow */
-  }
+    border: 1px solid #666;
+    /* add a border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* add a shadow */
+}
 
 
 @media (max-width: 768px) {
@@ -221,7 +294,9 @@ body {
         cursor: pointer;
     }
 
-    .bar1, .bar2, .bar3 {
+    .bar1,
+    .bar2,
+    .bar3 {
         width: 35px;
         height: 5px;
         background-color: #fff;
