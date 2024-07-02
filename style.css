@@ -147,7 +147,8 @@ span {
   margin: 0 auto;
   /* background-color: RGB(255 199 44); */
   /* background-color: #1e1c1d; */
-  background:linear-gradient(to right, #1e1c1d, yellow);
+  background: linear-gradient(to right, black 50.67%, #f9d819 50%);
+
   padding: 1em;
   display: flex;
   justify-content: space-between;
@@ -265,12 +266,13 @@ span {
 #name {
   /* background-color: #fff; */
   /* top: 250px; */
-  padding-top: 80px;
-  padding-left: 50px;
+  padding-top: 250px;
+  padding-left: 20px;
   height: 210px;
   width: 100%;
   display: flex; 
   align-items: center;
+  
   /* justify-content: center; */
   text-align: center;
 }
@@ -278,11 +280,42 @@ span {
 #name h1 {
   /* color: RGB(255 199 44); */
   color: #000;
-  font-size: 60px;
+  font-size: 70px;
 }
 
 #name p {
   font-size: 20px;
+}
+#history{
+  /* background-color: #1e1c1d; */
+  position: relative;
+  top: 50px;
+  /* left: px; */
+  color: #000;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  height: 300px;
+  width: 400px;
+  font-size: 24px;
+  font-weight: bold;
+  /* font-family: Croissant One; */
+  /* font-family: "Russo One", sans-serif; */
+}
+#tag-line{
+  height: 200px;
+  width: 300px;
+  /* background-color:#007bff; */
+  position: relative;
+  left: 75vw;
+  top: -300px;
+  text-align: center;
+  /* font-family: "Russo One", sans-serif;  */
+}
+#tag-line h1{
+  font-size: 53px;
+  color: #f9d819;
 }
 
 #Restaurant {
