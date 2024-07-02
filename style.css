@@ -11,6 +11,13 @@ body {
   background-color: #f9f9f9;
   overflow-x: hidden;
 }
+#main{
+  height: 100%;
+  width: 100%;
+  /* position: absolute; */
+  background-image:url(https://images.playground.com/3aaecdd0afa74d1ba8015290ae11a8ad.jpeg) ;
+}
+
 
 /* 
 #cursor {
