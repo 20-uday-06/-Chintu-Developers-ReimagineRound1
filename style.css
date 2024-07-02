@@ -240,9 +240,17 @@ span {
 #menu-toggle {
   display: none;
 }
+.landing-page {
+  height: 600px;
+  width: 100%;
+  background-color: red;
+  background-image: url("https://img.freepik.com/free-photo/ingredients-near-pizza_23-2147772081.jpg?t=st=1719941393~exp=1719944993~hmac=783440f07b0a400c640364c4355847d6da705c109b5d25d6d387b4dbeefdce25&w=826");
+  background-size: cover;
+  background-position: center;
+}
 
 #name {
-  background-color: #fff;
+  /* background-color: #fff; */
   height: 110px;
   width: 100%;
   /* display: flex; */
@@ -260,7 +268,7 @@ span {
 }
 
 #Restaurant {
-  background-color: #fff;
+  /* background-color: #fff; */
   height: 37px;
   width: 100%;
   display: flex;
@@ -301,7 +309,7 @@ span {
   background-color: #fff;
   height: 300px;
   width: 100%;
-  padding-top: 100px;
+  /* padding-top: 100px; */
 }
 #circle div {
   border: none;
@@ -506,10 +514,12 @@ span {
 }
 #card h1 {
   margin-top: 4vw;
+  font-family: Croissant One;
+  font-size: 3vw;
 }
 
 .slider-container {
-  margin-top: 15vw;
+  margin-top: 12vw;
   /* padding: 2vw 0; */
   /* background-color: red; */
   width: 100%;
