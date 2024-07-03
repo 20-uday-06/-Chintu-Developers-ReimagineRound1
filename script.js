@@ -1,5 +1,5 @@
 function myFunction(x) {
-    x.classList.toggle("change");
+  x.classList.toggle("change");
 }
 // var crsr = document.querySelector("#cursor");
 // var blur1 = document.querySelector("#blur1");
@@ -32,61 +32,195 @@ function myFunction(x) {
 //     blur5.style.top = `calc(${dets.clientY}px - 50vh)`;
 // });
 
-
 (function () {
+  const link = document.querySelectorAll("nav > .hover-this");
+  const cursor = document.querySelector(".cursor");
 
-    const link = document.querySelectorAll('nav > .hover-this');
-    const cursor = document.querySelector('.cursor');
+  const animateit = function (e) {
+    const span = this.querySelector("span");
+    const { offsetX: x, offsetY: y } = e,
+      { offsetWidth: width, offsetHeight: height } = this,
+      move = 25,
+      xMove = (x / width) * (move * 2) - move,
+      yMove = (y / height) * (move * 2) - move;
 
-    const animateit = function (e) {
-          const span = this.querySelector('span');
-          const { offsetX: x, offsetY: y } = e,
-          { offsetWidth: width, offsetHeight: height } = this,
+    span.style.transform = `translate(${xMove}px, ${yMove}px)`;
 
-          move = 25,
-          xMove = x / width * (move * 2) - move,
-          yMove = y / height * (move * 2) - move;
+    if (e.type === "mouseleave") span.style.transform = "";
+  };
 
-          span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+  const editCursor = (e) => {
+    const { clientX: x, clientY: y } = e;
+    cursor.style.left = x + "px";
+    cursor.style.top = y + "px";
+  };
 
-          if (e.type === 'mouseleave') span.style.transform = '';
-    };
-
-    const editCursor = e => {
-          const { clientX: x, clientY: y } = e;
-          cursor.style.left = x + 'px';
-          cursor.style.top = y + 'px';
-    };
-
-    link.forEach(b => b.addEventListener('mousemove', animateit));
-    link.forEach(b => b.addEventListener('mouseleave', animateit));
-    window.addEventListener('mousemove', editCursor);
-
+  link.forEach((b) => b.addEventListener("mousemove", animateit));
+  link.forEach((b) => b.addEventListener("mouseleave", animateit));
+  window.addEventListener("mousemove", editCursor);
 })();
 
 var h4all = document.querySelectorAll("#nav");
 h4all.forEach(function (elem) {
-    elem.addEventListener("mouseenter", function () {
-        crsr.style.scale = 3;
-        crsr.style.border = "1px solid #fff";
-        crsr.style.backgroundColor = "transparent";
-    });
-    elem.addEventListener("mouseleave", function () {
-        crsr.style.scale = 1;
-        crsr.style.border = "0px solid #95C11E";
-        crsr.style.backgroundColor = "#95C11E";
-    });
+  elem.addEventListener("mouseenter", function () {
+    crsr.style.scale = 3;
+    crsr.style.border = "1px solid #fff";
+    crsr.style.backgroundColor = "transparent";
+  });
+  elem.addEventListener("mouseleave", function () {
+    crsr.style.scale = 1;
+    crsr.style.border = "0px solid #95C11E";
+    crsr.style.backgroundColor = "#95C11E";
+  });
 });
 gsap.to("#nav", {
-    backgroundColor: "#000",
-    duration: 0.5,
-    height: "110px",
-    scrollTrigger: {
-        trigger: "#nav",
-        scroller: "body",
-        // markers:true,
-        start: "top -10%",
-        end: "top -11%",
-        scrub: 1,
-    },
+  backgroundColor: "#000",
+  duration: 0.5,
+  height: "110px",
+  scrollTrigger: {
+    trigger: "#nav",
+    scroller: "body",
+    // markers:true,
+    start: "top -10%",
+    end: "top -11%",
+    scrub: 1,
+  },
 });
+
+// Scroll Pinned Image
+// gsap.registerPlugin(ScrollTrigger);
+
+// const sections = document.querySelectorAll(".section");
+// const mainImage = document.getElementById("main-image");
+
+// sections.forEach((section, index) => {
+//   ScrollTrigger.create({
+//     trigger: section,
+//     start: "top center",
+//     end: "bottom center",
+//     onEnter: () => {
+//       const newImage = section.getAttribute("data-image");
+//       if (mainImage.src !== newImage) {
+//         gsap.to(mainImage, {
+//           opacity: 0,
+//           duration: 0.5,
+//           onComplete: () => {
+//             mainImage.src = newImage;
+//             gsap.to(mainImage, { opacity: 1, duration: 0.5 });
+//           },
+//         });
+//       }
+//     },
+//   });
+// });
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// const sections = document.querySelectorAll(".section");
+// const mainImage = document.getElementById("main-image");
+
+// sections.forEach((section, index) => {
+//   ScrollTrigger.create({
+//     trigger: section,
+//     start: "top center",
+//     end: "bottom center",
+//     onEnter: () => {
+//       const newImage = section.getAttribute("data-image");
+//       if (mainImage.src !== newImage) {
+//         gsap.to(mainImage, {
+//           opacity: 0,
+//           duration: 0.5,
+//           onComplete: () => {
+//             mainImage.src = newImage;
+//             gsap.to(mainImage, { opacity: 1, duration: 0.5 });
+//           },
+//         });
+//       }
+//     },
+//   });
+// });
+
+gsap.from(".card-box .card", {
+  opacity: 0,
+  duration: 2,
+  delay: 1,
+  stagger: 0.6,
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+const sections = document.querySelectorAll(".section");
+
+sections.forEach((section, i) => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top top",
+    end: "bottom top",
+    onEnter: () => {
+      gsap.to(section, { backgroundPosition: "center 0%", ease: "none" });
+    },
+    onLeave: () => {
+      gsap.to(section, { backgroundPosition: "center -50%", ease: "none" });
+    },
+    onEnterBack: () => {
+      gsap.to(section, { backgroundPosition: "center 0%", ease: "none" });
+    },
+    onLeaveBack: () => {
+      gsap.to(section, { backgroundPosition: "center 50%", ease: "none" });
+    },
+  });
+});
+// const scrollContainer = document.querySelector(".scroll-container");
+// const scrollContent = document.querySelector(".scroll-content");
+// const contentWidth = scrollContent.scrollWidth;
+// const viewportWidth = window.innerWidth;
+
+// gsap.to(scrollContent, {
+//   x: () => `-${contentWidth - viewportWidth}px`,
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: scrollContainer,
+//     start: "top",
+//     // end: () => `+=${contentWidth - viewportWidth}`,
+//     end: "bottom",
+//     pin: true,
+//     scrub: true,
+//     markers: true,
+//   },
+// });
+
+// Swiper
+let next = document.querySelector(".next");
+let prev = document.querySelector(".prev");
+
+next.addEventListener("click", function () {
+  let items = document.querySelectorAll(".item");
+  document.querySelector(".slide").appendChild(items[0]);
+});
+
+prev.addEventListener("click", function () {
+  let items = document.querySelectorAll(".item");
+  document.querySelector(".slide").prepend(items[items.length - 1]); // here the length of items = 6
+});
+
+let sections1 = document.querySelectorAll(".wodka");
+let navLinks = document.querySelectorAll("nav li a");
+console.log(sections);
+console.log(navLinks);
+
+window.onscroll = () => {
+  sections1.forEach((sec) => {
+    let top = window.scrolly;
+    let offset = sec.offsetTop;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach((links) => {
+        links.classList.remove("active");
+        document
+          .querySelector("header nav a [href=" + id + "]")
+          .classList.add("active");
+      });
+    }
+  });
+};
