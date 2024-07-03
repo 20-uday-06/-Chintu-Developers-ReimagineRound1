@@ -266,7 +266,7 @@ span {
   position: relative;
   z-index: 10;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: red;
   /* background-image: url("https://img.freepik.com/free-photo/ingredients-near-pizza_23-2147772081.jpg?t=st=1719941393~exp=1719944993~hmac=783440f07b0a400c640364c4355847d6da705c109b5d25d6d387b4dbeefdce25&w=826"); */
   background-size: cover;
