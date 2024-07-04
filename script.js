@@ -92,35 +92,35 @@ function myFunction(x) {
   x.classList.toggle("change");
 }
 // var crsr = document.querySelector("#cursor");
-// var blur1 = document.querySelector("#blur1");
+var blur = document.querySelector("#blur");
 // var blur2 = document.querySelector("#blur2");
 // var blur3 = document.querySelector("#blur3");
 // var blur4 = document.querySelector("#blur4");
 // var blur5 = document.querySelector("#blur5");
 
-// document.addEventListener("mousemove", function (dets) {
-//     crsr.style.left = dets.x + "px";
-//     crsr.style.top = dets.y + "px";
+document.addEventListener("mousemove", function (dets) {
+  //     crsr.style.left = dets.x + "px";
+  //     crsr.style.top = dets.y + "px";
 
-//     blur1.style.left = dets.x - 100 + "px";
-//     blur1.style.top = dets.y - 100 + "px";
+  blur.style.left = dets.x - 100 + "px";
+  blur.style.top = dets.y - 100 + "px";
 
-//     blur2.style.left = dets.x - 150 + "px";
-//     blur2.style.top = dets.y - 150 + "px";
+  //     blur2.style.left = dets.x - 150 + "px";
+  //     blur2.style.top = dets.y - 150 + "px";
 
-//     blur3.style.left = dets.x - 250 + "px";
-//     blur3.style.top = dets.y - 250 + "px";
+  //     blur3.style.left = dets.x - 250 + "px";
+  //     blur3.style.top = dets.y - 250 + "px";
 
-//     blur4.style.left = dets.x - 350 + "px";
-//     blur4.style.top = dets.y - 350 + "px";
+  //     blur4.style.left = dets.x - 350 + "px";
+  //     blur4.style.top = dets.y - 350 + "px";
 
-//     // blur5.style.left = dets.x - 50vh + "vh";
-//     // blur5.style.top = dets.y - 50vw + "vw";
-//     // blur5.style.left = `calc(${dets.x}vw - 50vw)`;
-//     // blur5.style.top = `calc(${dets.y}vh - 50vh)`;
-//     blur5.style.left = `calc(${dets.clientX}px - 50vw)`;
-//     blur5.style.top = `calc(${dets.clientY}px - 50vh)`;
-// });
+  //     // blur5.style.left = dets.x - 50vh + "vh";
+  //     // blur5.style.top = dets.y - 50vw + "vw";
+  //     // blur5.style.left = `calc(${dets.x}vw - 50vw)`;
+  //     // blur5.style.top = `calc(${dets.y}vh - 50vh)`;
+  //     blur5.style.left = `calc(${dets.clientX}px - 50vw)`;
+  //     blur5.style.top = `calc(${dets.clientY}px - 50vh)`;
+});
 
 (function () {
   const link = document.querySelectorAll("nav > .hover-this");
@@ -149,6 +149,42 @@ function myFunction(x) {
   link.forEach((b) => b.addEventListener("mouseleave", animateit));
   window.addEventListener("mousemove", editCursor);
 })();
+gsap.from("#colon1", {
+  y: -70,
+  x: -70,
+  scrollTrigger: {
+    trigger: "#colon1",
+    scroller: "body",
+    // markers:true,
+    start: "top 55%",
+    end: "top 45%",
+    scrub: 4,
+  },
+});
+gsap.from("#colon2", {
+  y: 70,
+  x: 70,
+  scrollTrigger: {
+    trigger: "#colon1",
+    scroller: "body",
+    // markers:true,
+    start: "top 55%",
+    end: "top 45%",
+    scrub: 4,
+  },
+});
+gsap.from("#popup h1", {
+  y: 50,
+  scrollTrigger: {
+    trigger: "#popup h1",
+    scroller: "body",
+    // markers:true,
+    start: "top 75%",
+    end: "top 70%",
+    scrub: 3,
+  },
+});
+
 
 var h4all = document.querySelectorAll("#nav");
 h4all.forEach(function (elem) {
