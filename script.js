@@ -1,3 +1,93 @@
+const preloaderFunction = () => {
+  const tl = gsap.timeline();
+  tl.from(".first-page .last", {
+    height: 0,
+    width: 0,
+    opacity: 0,
+    duration: 1.5,
+    // display: none,
+  });
+
+  tl.from(".first-page h2 span", {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    stagger: 0.5,
+    // display: none,
+  });
+  // Animation to fade out the images
+  tl.to(".first-page .last", {
+    opacity: 0,
+    duration: 1,
+  });
+  tl.to(".first-page h2 span", {
+    opacity: 0,
+    duration: 1,
+  });
+  // Black screen animation
+  tl.to(
+    "#preloader",
+    {
+      backgroundColor: "#000", // Change background color to black
+      duration: 0.5,
+    },
+    "-=0.5"
+  ); // Overlap with the end of the h2 animation
+
+  // var h1 = document.querySelector("#preloader h1");
+  // var h1Text = document.querySelector("h1").innerText;
+
+  // var splittedText = h1Text.split("");
+
+  // var half = h1Text.length / 2;
+
+  // var clutter = "";
+
+  // // Traversing every letter of the splittedText
+  // splittedText.forEach((elem, index) => {
+  //   if (index < half) {
+  //     clutter += `<span class="front">${elem}</span>`;
+  //   } else {
+  //     clutter += `<span class="back">${elem}</span>`;
+  //   }
+  // });
+
+  tl.from(
+    "h1 .front",
+    {
+      opacity: 0,
+      y: 80,
+      duration: 1.7,
+      stagger: 0.3,
+      // color: yellow,
+    },
+    "same"
+  ).from(
+    "h1 .back",
+    {
+      opacity: 0,
+      y: 80,
+      duration: 1.7,
+      stagger: -0.3,
+      // color: yellow,
+    },
+    "same"
+  );
+  // Hide the preloader and show the main content
+
+  tl.to("#preloader", {
+    x: "-100%",
+    onComplete: () => {
+      document.body.classList.remove("loading");
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("main").style.display = "block";
+    },
+  });
+};
+window.addEventListener("load", preloaderFunction);
+
+// window.addEventListener("load", preloaderFunction);
+
 function myFunction(x) {
   x.classList.toggle("change");
 }

@@ -158,7 +158,7 @@ span {
   z-index: 100;
 }
 #main {
-  background-color: #171612;
+  background-color: #020304;
 }
 
 /* .sb {
@@ -259,7 +259,6 @@ span {
   z-index: 10;
   height: 100vh;
   width: 100%;
-  background-color: red;
   /* background-image: url("https://img.freepik.com/free-photo/ingredients-near-pizza_23-2147772081.jpg?t=st=1719941393~exp=1719944993~hmac=783440f07b0a400c640364c4355847d6da705c109b5d25d6d387b4dbeefdce25&w=826"); */
   background-size: cover;
   /* background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
@@ -800,6 +799,9 @@ span {
 p {
   font-family: Crossiant One;
 }
+.section h1 {
+  color: yellow;
+}
 .section p {
   line-height: 40px;
 }
@@ -852,11 +854,12 @@ p {
 .container2 {
   position: absolute;
   top: 55%;
-  left: 45%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 570px;
+  width: 90%;
+  height: 75%;
   background: #f53232;
+  border-radius: 20px;
 }
 
 .container2 .slide .item {
@@ -866,7 +869,7 @@ p {
   top: 50%;
   display: inline-block;
   transform: translate(0, -50%);
-  border-radius: 20px;
+  border-radius: 10px;
   /* box-shadow: 0 8px 18px #ec3737; */
   background-position: 50% 50%;
   background-size: cover;
@@ -934,16 +937,19 @@ p {
 
 .content button {
   padding: 10px 20px;
-  border: 1.5px solid white;
+  /* border: 1.5px solid white; */
   cursor: pointer;
   opacity: 0;
   animation: animate 1s ease-in-out 0.6s 1 forwards;
   color: black;
   border-radius: 25px;
   font-weight: bold;
+  background-color: yellow;
+  border: none;
 }
 .content button:hover {
-  background-color: transparent;
+  background-color: #fff;
+  border: 1.5 px solid white;
 }
 
 .button {
@@ -964,8 +970,9 @@ p {
   border: none;
   cursor: pointer;
   margin: 0 5px;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   transition: 0.3s;
+  background-color: yellow;
 }
 
 .button button:hover {
@@ -2686,4 +2693,142 @@ p {
   .xl\:grid-cols-7 {
     grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
   }
+}
+
+/* Preloader styles */
+body.loading {
+  overflow: hidden;
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  z-index: 9999;
+  background-color: #000;
+}
+#preloader h1 {
+  font-size: 10vw;
+  color: #fff;
+  padding: 20px;
+  overflow: hidden;
+  /* display: none; */
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  z-index: 99;
+}
+#preloader h1 span {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 10vw;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.first-page {
+  height: 100%;
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first-page .container {
+  height: 90%;
+  width: 90%;
+  /* background-color: yellow; */
+  /* position: relative; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* gap: 25px; */
+  position: relative;
+}
+.container div {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+  position: absolute;
+}
+.first-page h2 {
+  position: absolute;
+  z-index: 40;
+  top: 30%;
+  /* left: 20%; */
+  color: #fff;
+  font-size: 8.5vw;
+  /* font-family: Crossiant One; */
+  line-height: 1.1;
+  text-align: center;
+}
+.first-page h2 span {
+  font-family: Arial, sans-serif;
+  line-height: 1.1;
+  display: inline-block;
+  font-size: 8.5vw;
+  font-weight: bold;
+}
+.container img {
+  border-radius: 20px;
+}
+.first {
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.second {
+  top: 10%;
+  left: 250px;
+  z-index: 5;
+}
+.third {
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+.fourth {
+  top: -20px;
+  left: 60%;
+  z-index: 5;
+}
+.fifth {
+  top: 24%;
+  left: 30px;
+  z-index: 6;
+}
+.sixth {
+  top: 10%;
+  right: 30px;
+  z-index: 6;
+}
+.seventh {
+  top: 10px;
+  left: 30%;
+  z-index: 5;
+}
+.eight {
+  top: 20%;
+  left: 40%;
+  z-index: 6;
+}
+.last {
+  height: 100% !important;
+  width: 100% !important;
+  z-index: 30;
+  position: absolute;
+}
+.last img {
+  object-fit: cover;
+}
+.center {
+  top: 8%;
+  left: 20%;
+  height: 400px !important;
+  width: 700px !important;
+  z-index: 4;
 }
