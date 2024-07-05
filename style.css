@@ -31,7 +31,7 @@ body {
   border-radius: 50%;
   position: fixed;
   filter: blur(60px);
-  z-index: 2;
+  /* z-index: 1; */
   transition: all linear;
 }
 /*
