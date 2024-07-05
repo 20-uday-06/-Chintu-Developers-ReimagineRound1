@@ -3127,12 +3127,6 @@ body.loading {
   /* gap: 25px; */
   position: relative;
 }
-.container div {
-  height: 400px;
-  width: 300px;
-  object-fit: cover;
-  position: absolute;
-}
 .first-page h2 {
   position: absolute;
   z-index: 40;
