@@ -5,15 +5,19 @@ const preloaderFunction = () => {
     // height: 0,
     // width: 0,
     opacity: 1,
-    duration: 15,
+    duration: 6,
   });
 
-  tl.to(".first-page h2 span", {
-    opacity: 1,
-    y: 30,
-    duration: 1,
-    stagger: 0.5,
-  });
+  tl.to(
+    ".first-page h2 span",
+    {
+      opacity: 1,
+      y: 30,
+      duration: 1,
+      stagger: 0.5,
+    },
+    "-=0.5"
+  );
   // Animation to fade out the images
   tl.to(".first-page .last", {
     opacity: 0,
@@ -57,6 +61,9 @@ const preloaderFunction = () => {
 
   tl.to("#preloader", {
     x: "-100%",
+    y: "-100%",
+    // duration: 1.5,
+    opacity: 0,
     onComplete: () => {
       document.body.classList.remove("loading");
       document.getElementById("preloader").style.display = "none";
@@ -119,7 +126,6 @@ gsap.from(".promo-container", {
     // markers: true,
     start: "top -8300px",
     end: "top -8900px",
-    scrub: 2,
   },
 });
 
