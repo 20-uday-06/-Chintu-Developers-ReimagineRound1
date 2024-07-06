@@ -31,7 +31,7 @@ body {
   border-radius: 50%;
   position: fixed;
   filter: blur(60px);
-  z-index: 2;
+  /* z-index: 1; */
   transition: all linear;
 }
 /*
@@ -375,8 +375,9 @@ nav span {
 }
 
 #tag-line h1 {
-  font-size: 53px;
+  font-size: 66px;
   color: #f9d819;
+  font-family: Crossiant One;
 }
 
 #Restaurant {
@@ -756,7 +757,7 @@ nav span {
 #items {
   display: flex;
   flex-direction: column;
-  padding: 0 8vw 2vw 8vw;
+  padding: 0 8vw 4vw 8vw;
   gap: 40px;
 }
 
@@ -783,6 +784,7 @@ nav span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: none;
 }
 
 .card:hover {
@@ -3096,19 +3098,21 @@ body.loading {
   padding: 20px;
   overflow: hidden;
   /* display: none; */
+  /* opacity: 0; */
   position: absolute;
   top: 35%;
   left: 20%;
   z-index: 99;
 }
 h1 span {
+  opacity: 0;
   display: inline-block;
   margin-right: 10px;
   font-size: 10vw;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: yellow;
+  color: #ffbb0e;
 }
 .first-page {
   height: 100%;
@@ -3145,6 +3149,7 @@ h2 span {
   display: inline-block;
   font-size: 8.5vw;
   font-weight: bold;
+  opacity: 0;
 }
 .container img {
   border-radius: 20px;
@@ -3208,7 +3213,7 @@ h2 span {
 #about {
   height: 100vh;
   width: 100%;
-  background-color: rgb(23, 22, 18);
+  background-color: #020304;
   display: flex;
   align-items: center;
   position: relative;

@@ -8,62 +8,62 @@ const preloaderFunction = () => {
   //   // display: none,
   // });
 
-  // tl.from(".first-page h2 span", {
-  //   opacity: 0,
-  //   y: 30,
-  //   duration: 1,
-  //   stagger: 0.5,
-  //   // display: none,
-  // });
-  // // Animation to fade out the images
-  // tl.to(".first-page .last", {
-  //   opacity: 0,
-  //   duration: 1,
-  // });
-  // tl.to(".first-page h2 span", {
-  //   opacity: 0,
-  //   duration: 1,
-  // });
-  // // Black screen animation
-  // tl.to(
-  //   "#preloader",
-  //   {
-  //     backgroundColor: "#000", // Change background color to black
-  //     duration: 0.5,
-  //   },
-  //   "-=0.5"
-  // ); // Overlap with the end of the h2 animation
-  // tl.from(
-  //   "h1 .front",
-  //   {
-  //     opacity: 0,
-  //     y: 80,
-  //     duration: 1.7,
-  //     stagger: 0.5,
-  //     // color: yellow,
-  //   },
-  //   "same"
-  // ).from(
-  //   "h1 .back",
-  //   {
-  //     opacity: 0,
-  //     y: 80,
-  //     duration: 1.7,
-  //     stagger: -0.5,
-  //     // color: yellow,
-  //   },
-  //   "same"
-  // );
-  // // Hide the preloader and show the main content
+  tl.to(".first-page h2 span", {
+    opacity: 1,
+    y: 30,
+    duration: 1,
+    stagger: 0.5,
+    // display: none,
+  });
+  // Animation to fade out the images
+  tl.to(".first-page .last", {
+    opacity: 0,
+    duration: 1,
+  });
+  tl.to(".first-page h2 span", {
+    opacity: 0,
+    duration: 1,
+  });
+  // Black screen animation
+  tl.to(
+    "#preloader",
+    {
+      backgroundColor: "#D90008", // Change background color to black
+      duration: 0.5,
+    },
+    "-=0.5"
+  ); // Overlap with the end of the h2 animation
+  tl.to(
+    "h1 .front",
+    {
+      opacity: 1,
+      y: -30,
+      duration: 1.7,
+      stagger: 0.5,
+      // color: yellow,
+    },
+    "same"
+  ).to(
+    "h1 .back",
+    {
+      opacity: 1,
+      y: -30,
+      duration: 1.7,
+      stagger: -0.5,
+      // color: yellow,
+    },
+    "same"
+  );
+  // Hide the preloader and show the main content
 
-  // tl.to("#preloader", {
-  //   x: "-100%",
-  //   onComplete: () => {
-  //     document.body.classList.remove("loading");
-  //     document.getElementById("preloader").style.display = "none";
-  //     document.getElementById("main").style.display = "block";
-  //   },
-  // });
+  tl.to("#preloader", {
+    x: "-100%",
+    onComplete: () => {
+      document.body.classList.remove("loading");
+      document.getElementById("preloader").style.display = "none";
+      document.getElementById("main").style.display = "block";
+    },
+  });
   tl.from("#logo h1", {
     opacity: 0,
     y: 80,
@@ -96,7 +96,7 @@ const preloaderFunction = () => {
   });
   tl.from("#name button", {
     opacity: 0,
-    duration: 1.5,
+    duration: 1,
   });
 };
 window.addEventListener("load", preloaderFunction);
