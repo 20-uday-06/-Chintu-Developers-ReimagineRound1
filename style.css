@@ -3317,6 +3317,7 @@ h2 span {
   -webkit-text-stroke: 2px #fff;
 }
 .mc-coy {
+  /* opacity: 0; */
   width: 100%;
   padding: 4vw 5vw;
   display: flex;
@@ -3325,6 +3326,7 @@ h2 span {
 }
 
 .promo-container {
+  /* opacity: 0; */
   display: flex;
   gap: 50px;
   /* background-color: #fff; */

@@ -1,3 +1,4 @@
+gsap.registerPlugin(ScrollTrigger);
 const preloaderFunction = () => {
   const tl = gsap.timeline();
   // tl.from(".first-page .last", {
@@ -141,6 +142,30 @@ document.addEventListener("mousemove", function (dets) {
   //     blur5.style.top = `calc(${dets.clientY}px - 50vh)`;
 });
 
+// gsap.to(".promo-container", {
+//   opacity: 1,
+//   // backgroundColor: "#95c11e",
+//   scrollTrigger: {
+//     trigger: ".promo-container",
+//     scroller: ".promo-container",
+//     markers: true,
+//     start: "top 50%",
+//     end: "top 85%",
+//     scrub: 2,
+//   },
+// });
+gsap.from(".promo-container", {
+  opacity: 0,
+  scrollTrigger: {
+      trigger: ".promo-container",
+      scroller: window, 
+      markers: true,
+      start: "top -8300px",
+      end: "top -8900px",
+      scrub: 2,
+  }
+});
+
 (function () {
   const link = document.querySelectorAll("nav > .hover-this");
   const cursor = document.querySelector(".cursor");
@@ -184,7 +209,7 @@ gsap.from("#colon2", {
   y: 70,
   x: 70,
   scrollTrigger: {
-    trigger: "#colon1",
+    trigger: "#colon2",
     scroller: "body",
     // markers:true,
     start: "top 55%",
@@ -230,7 +255,7 @@ h4all.forEach(function (elem) {
   });
 });
 gsap.to("#nav", {
-  backgroundColor: "#FF0100",
+  backgroundColor: "#000",
   duration: 0.5,
   // height: "110px",
   scrollTrigger: {
@@ -303,7 +328,7 @@ gsap.from(".card-box .card", {
   stagger: 0.6,
 });
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 const sections = document.querySelectorAll(".section");
 
@@ -413,14 +438,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// gsap.to(".mc-coy", {
-//   // opacity: 1,
-//   scrollTrigger: {
-//     trigger: ".mc-coy",
-//     scroller: "body",
-//     // markers: true,
-//     start: "top -25%",
-//     end: "top -70%",
-//     scrub: 2,
-//   },
-// });
+
