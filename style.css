@@ -34,6 +34,7 @@ body {
   /* z-index: 1; */
   transition: all linear;
 }
+
 /*
 #blur2 {
     height: 300px;
@@ -127,7 +128,7 @@ nav span {
   transition: transform 0.3s ease;
 }
 
-.hover-this:hover ~ .cursor {
+.hover-this:hover~.cursor {
   transform: translate(-50%, -50%) scale(8);
 }
 
@@ -167,6 +168,7 @@ nav span {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  /* height: 10vh; */
   /* padding-top: 2vh; */
   position: fixed;
   top: 0;
@@ -237,6 +239,7 @@ nav span {
   width: 40px;
   height: 40px;
 }
+
 #logo h1 {
   padding-left: 1vw;
   font-size: 4vw;
@@ -861,9 +864,11 @@ nav span {
 p {
   font-family: Crossiant One;
 }
+
 .section h1 {
   color: yellow;
 }
+
 .section p {
   line-height: 40px;
 }
@@ -1539,14 +1544,15 @@ textarea:focus,
 select:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+  --tw-ring-inset: var(--tw-empty,
+      /*!*/
+      /*!*/
+    );
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: #2563eb;
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   -webkit-box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
     var(--tw-shadow);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
@@ -1670,14 +1676,15 @@ select {
 [type="radio"]:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-  --tw-ring-inset: var(--tw-empty, /*!*/ /*!*/);
+  --tw-ring-inset: var(--tw-empty,
+      /*!*/
+      /*!*/
+    );
   --tw-ring-offset-width: 2px;
   --tw-ring-offset-color: #fff;
   --tw-ring-color: #2563eb;
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0
-    var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
-    calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   -webkit-box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
     var(--tw-shadow);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
@@ -2218,12 +2225,8 @@ select {
 .scale-\[2\.0\] {
   --tw-scale-x: 2 !important;
   --tw-scale-y: 2 !important;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
 .grid-cols-1 {
@@ -2312,19 +2315,19 @@ select {
   row-gap: 0.5rem !important;
 }
 
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+.space-y-2> :not([hidden])~ :not([hidden]) {
   --tw-space-y-reverse: 0 !important;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse))) !important;
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse)) !important;
 }
 
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+.space-y-3> :not([hidden])~ :not([hidden]) {
   --tw-space-y-reverse: 0 !important;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse))) !important;
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse)) !important;
 }
 
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
+.space-y-5> :not([hidden])~ :not([hidden]) {
   --tw-space-y-reverse: 0 !important;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse))) !important;
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse)) !important;
@@ -2427,43 +2430,31 @@ select {
 }
 
 .bg-\[conic-gradient\(at_right\2c _var\(--tw-gradient-stops\)\)\] {
-  background-image: conic-gradient(
-    at right,
-    var(--tw-gradient-stops)
-  ) !important;
+  background-image: conic-gradient(at right,
+      var(--tw-gradient-stops)) !important;
 }
 
 .bg-\[radial-gradient\(ellipse_at_center\2c _var\(--tw-gradient-stops\)\)\] {
-  background-image: radial-gradient(
-    ellipse at center,
-    var(--tw-gradient-stops)
-  ) !important;
+  background-image: radial-gradient(ellipse at center,
+      var(--tw-gradient-stops)) !important;
 }
 
 .bg-gradient-to-b {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(var(--tw-gradient-stops))
-  ) !important;
-  background-image: linear-gradient(
-    to bottom,
-    var(--tw-gradient-stops)
-  ) !important;
+  background-image: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(var(--tw-gradient-stops))) !important;
+  background-image: linear-gradient(to bottom,
+      var(--tw-gradient-stops)) !important;
 }
 
 .bg-gradient-to-r {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(var(--tw-gradient-stops))
-  ) !important;
-  background-image: linear-gradient(
-    to right,
-    var(--tw-gradient-stops)
-  ) !important;
+  background-image: -webkit-gradient(linear,
+      left top,
+      right top,
+      from(var(--tw-gradient-stops))) !important;
+  background-image: linear-gradient(to right,
+      var(--tw-gradient-stops)) !important;
 }
 
 .from-gray-700 {
@@ -2857,6 +2848,7 @@ p {
 }
 
 @-webkit-keyframes sk-bounce {
+
   0%,
   100% {
     -webkit-transform: scale(0);
@@ -2870,6 +2862,7 @@ p {
 }
 
 @keyframes sk-bounce {
+
   0%,
   100% {
     -webkit-transform: scale(0);
@@ -2938,12 +2931,8 @@ p {
 .group:hover .group-hover\:scale-110 {
   --tw-scale-x: 1.1 !important;
   --tw-scale-y: 1.1 !important;
-  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
-    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
-    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
 .group:hover .group-hover\:shadow-sm {
@@ -3093,6 +3082,7 @@ p {
 body.loading {
   overflow: hidden;
 }
+
 #preloader {
   position: fixed;
   top: 0;
@@ -3106,6 +3096,7 @@ body.loading {
   z-index: 9999;
   background-color: #000;
 }
+
 #preloader h1 {
   font-size: 10vw;
   color: #fff;
@@ -3118,6 +3109,7 @@ body.loading {
   left: 15%;
   z-index: 99;
 }
+
 h1 span {
   opacity: 0;
   display: inline-block;
@@ -3128,6 +3120,7 @@ h1 span {
   font-weight: bold;
   color: #ffbb0e;
 }
+
 .first-page {
   height: 100%;
   width: 100%;
@@ -3136,6 +3129,7 @@ h1 span {
   justify-content: center;
   align-items: center;
 }
+
 .first-page .container {
   height: 90%;
   width: 90%;
@@ -3146,6 +3140,7 @@ h1 span {
   /* gap: 25px; */
   position: relative;
 }
+
 .first-page h2 {
   position: absolute;
   z-index: 40;
@@ -3157,6 +3152,7 @@ h1 span {
   line-height: 1.1;
   text-align: center;
 }
+
 h2 span {
   font-family: Arial, sans-serif;
   line-height: 1.1;
@@ -3165,58 +3161,70 @@ h2 span {
   font-weight: bold;
   opacity: 0;
 }
+
 .container img {
   border-radius: 20px;
 }
+
 .first {
   top: 0;
   left: 0;
   z-index: 5;
 }
+
 .second {
   top: 10%;
   left: 250px;
   z-index: 5;
 }
+
 .third {
   top: 0;
   right: 0;
   z-index: 5;
 }
+
 .fourth {
   top: -20px;
   left: 60%;
   z-index: 5;
 }
+
 .fifth {
   top: 24%;
   left: 30px;
   z-index: 6;
 }
+
 .sixth {
   top: 10%;
   right: 30px;
   z-index: 6;
 }
+
 .seventh {
   top: 10px;
   left: 30%;
   z-index: 5;
 }
+
 .eight {
   top: 20%;
   left: 40%;
   z-index: 6;
 }
+
 .last {
   height: 100% !important;
   width: 100% !important;
   z-index: 30;
   position: absolute;
 }
+
 .last img {
   object-fit: cover;
 }
+
 .center {
   top: 8%;
   left: 20%;
@@ -3224,6 +3232,7 @@ h2 span {
   width: 700px !important;
   z-index: 4;
 }
+
 #about {
   height: 100vh;
   width: 100%;
@@ -3233,7 +3242,8 @@ h2 span {
   position: relative;
   justify-content: center;
 }
-#about > p {
+
+#about>p {
   font-size: 33px;
   font-weight: 700;
   width: 60%;
@@ -3242,6 +3252,7 @@ h2 span {
   color: #95c11d;
   transition: color 0.3s;
 }
+
 #about p:hover {
   color: #f9d819;
 }
@@ -3250,14 +3261,17 @@ h2 span {
   position: absolute;
   height: 60px;
 }
+
 #about #colon1 {
   left: 13%;
   top: 25%;
 }
+
 #about #colon2 {
   bottom: 30%;
   right: 15%;
 }
+
 #popup {
   height: 30vh;
   width: 100%;
@@ -3268,9 +3282,11 @@ h2 span {
   position: relative;
   text-align: center;
 }
+
 #popup h1:hover {
   color: #95c11e;
 }
+
 .elem {
   height: 70%;
   width: 26%;
@@ -3293,6 +3309,7 @@ h2 span {
   position: absolute;
   z-index: 10;
 }
+
 .elem img {
   height: 100%;
   width: 100%;
@@ -3300,13 +3317,16 @@ h2 span {
   transition: all ease 0.5s;
   scale: 1.1;
 }
+
 .elem:hover h2 {
   color: #fff;
   background-color: transparent;
 }
+
 .elem:hover img {
   scale: 1;
 }
+
 #popup h1 {
   font-size: 6.4vw;
   position: absolute;
@@ -3316,6 +3336,7 @@ h2 span {
   color: #000;
   -webkit-text-stroke: 2px #fff;
 }
+
 .mc-coy {
   /* opacity: 0; */
   width: 100%;
@@ -3415,11 +3436,13 @@ h2 span {
   justify-content: center;
   align-items: center;
 }
+
 .happy-customers h1 {
   font-family: Crossiant One;
   color: #fff;
   font-size: 4vw;
 }
+
 .swiper-box {
   display: flex;
   flex-direction: column;
@@ -3456,6 +3479,70 @@ h2 span {
   border-radius: 15px;
   transition: transform 0.3s ease;
 }
+
 .swiper-slide img:hover {
   cursor: pointer;
+}
+
+#map {
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  width: 100vw;
+  /* background-color: #007bff; */
+  gap: 15px;
+  top: 30px;
+  padding-left: 30px;
+  box-shadow: 5px 5px 10px rgb(255, 255, 255), 10px 10px 15px rgba(0, 0, 255, 0.3);
+}
+
+.listing {
+  position: relative;
+  left: -46%;
+  z-index: 7;
+}
+
+
+.listing img {
+  height: 160px;
+  width: 160px;
+}
+.details{
+  height: 160px;
+  width: 33vw;
+  /* background-color: #95c11d; */
+  position: absolute;
+  left: 14vw;
+  top: 0px;
+  z-index: 8;
+}
+.details h2{
+  color: white;
+}
+.details p{
+  margin: 10px 0;
+  color: white;
+}
+
+.responsive-map {
+  background-color: #007bff;
+  overflow: hidden;
+  padding-bottom: 380px;
+  position: relative;
+  height: 0;
+  width: 45vw;
+  left: 21vw;
+  top: -63vh;
+}
+
+.responsive-map iframe {
+  background-color: #2563eb;
+  left: 0;
+  top: 0;
+  height: 70vh;
+  width: 100%;
+  position: absolute;
 }
