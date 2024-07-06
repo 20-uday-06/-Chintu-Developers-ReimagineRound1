@@ -97,7 +97,7 @@ body {
   transition: all 0.3s ease;
 }
 
-span {
+nav span {
   display: inline-block;
   font-family: "Russo One", sans-serif;
   font-weight: 400;
@@ -283,7 +283,7 @@ span {
 #name {
   /* background-color: #fff; */
   /* top: 250px; */
-  padding-top: 190px;
+  padding-top: 180px;
   padding-left: 16px;
   height: 210px;
   width: 100%;
@@ -3097,17 +3097,18 @@ body.loading {
   overflow: hidden;
   /* display: none; */
   position: absolute;
-  top: 20%;
-  left: 15%;
+  top: 35%;
+  left: 20%;
   z-index: 99;
 }
-#preloader h1 span {
+h1 span {
   display: inline-block;
   margin-right: 10px;
   font-size: 10vw;
   overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  color: yellow;
 }
 .first-page {
   height: 100%;
@@ -3138,7 +3139,7 @@ body.loading {
   line-height: 1.1;
   text-align: center;
 }
-.first-page h2 span {
+h2 span {
   font-family: Arial, sans-serif;
   line-height: 1.1;
   display: inline-block;
