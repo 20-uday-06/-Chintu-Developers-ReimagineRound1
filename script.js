@@ -1,20 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
 const preloaderFunction = () => {
   const tl = gsap.timeline();
-  // tl.from(".first-page .last", {
-  //   height: 0,
-  //   width: 0,
-  //   opacity: 0,
-  //   duration: 1.5,
-  //   // display: none,
-  // });
+  tl.to(".first-page .last", {
+    // height: 0,
+    // width: 0,
+    opacity: 1,
+    duration: 15,
+  });
 
   tl.to(".first-page h2 span", {
     opacity: 1,
     y: 30,
     duration: 1,
     stagger: 0.5,
-    // display: none,
   });
   // Animation to fade out the images
   tl.to(".first-page .last", {
@@ -106,64 +104,23 @@ const preloaderFunction = () => {
 };
 window.addEventListener("load", preloaderFunction);
 
-// window.addEventListener("load", preloaderFunction);
-
-// function myFunction(x) {
-//   x.classList.toggle("change");
-// }
-// var crsr = document.querySelector("#cursor");
 var blur = document.querySelector("#blur");
-// var blur2 = document.querySelector("#blur2");
-// var blur3 = document.querySelector("#blur3");
-// var blur4 = document.querySelector("#blur4");
-// var blur5 = document.querySelector("#blur5");
 
 document.addEventListener("mousemove", function (dets) {
-  //     crsr.style.left = dets.x + "px";
-  //     crsr.style.top = dets.y + "px";
-
   blur.style.left = dets.x - 100 + "px";
   blur.style.top = dets.y - 100 + "px";
-
-  //     blur2.style.left = dets.x - 150 + "px";
-  //     blur2.style.top = dets.y - 150 + "px";
-
-  //     blur3.style.left = dets.x - 250 + "px";
-  //     blur3.style.top = dets.y - 250 + "px";
-
-  //     blur4.style.left = dets.x - 350 + "px";
-  //     blur4.style.top = dets.y - 350 + "px";
-
-  //     // blur5.style.left = dets.x - 50vh + "vh";
-  //     // blur5.style.top = dets.y - 50vw + "vw";
-  //     // blur5.style.left = `calc(${dets.x}vw - 50vw)`;
-  //     // blur5.style.top = `calc(${dets.y}vh - 50vh)`;
-  //     blur5.style.left = `calc(${dets.clientX}px - 50vw)`;
-  //     blur5.style.top = `calc(${dets.clientY}px - 50vh)`;
 });
 
-// gsap.to(".promo-container", {
-//   opacity: 1,
-//   // backgroundColor: "#95c11e",
-//   scrollTrigger: {
-//     trigger: ".promo-container",
-//     scroller: ".promo-container",
-//     markers: true,
-//     start: "top 50%",
-//     end: "top 85%",
-//     scrub: 2,
-//   },
-// });
 gsap.from(".promo-container", {
   opacity: 0,
   scrollTrigger: {
-      trigger: ".promo-container",
-      scroller: window, 
-      // markers: true,
-      start: "top -8300px",
-      end: "top -8900px",
-      scrub: 2,
-  }
+    trigger: ".promo-container",
+    scroller: window,
+    // markers: true,
+    start: "top -8300px",
+    end: "top -8900px",
+    scrub: 2,
+  },
 });
 
 (function () {
@@ -267,68 +224,12 @@ gsap.to("#nav", {
     scrub: 1,
   },
 });
-
-// Scroll Pinned Image
-// gsap.registerPlugin(ScrollTrigger);
-
-// const sections = document.querySelectorAll(".section");
-// const mainImage = document.getElementById("main-image");
-
-// sections.forEach((section, index) => {
-//   ScrollTrigger.create({
-//     trigger: section,
-//     start: "top center",
-//     end: "bottom center",
-//     onEnter: () => {
-//       const newImage = section.getAttribute("data-image");
-//       if (mainImage.src !== newImage) {
-//         gsap.to(mainImage, {
-//           opacity: 0,
-//           duration: 0.5,
-//           onComplete: () => {
-//             mainImage.src = newImage;
-//             gsap.to(mainImage, { opacity: 1, duration: 0.5 });
-//           },
-//         });
-//       }
-//     },
-//   });
-// });
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const sections = document.querySelectorAll(".section");
-// const mainImage = document.getElementById("main-image");
-
-// sections.forEach((section, index) => {
-//   ScrollTrigger.create({
-//     trigger: section,
-//     start: "top center",
-//     end: "bottom center",
-//     onEnter: () => {
-//       const newImage = section.getAttribute("data-image");
-//       if (mainImage.src !== newImage) {
-//         gsap.to(mainImage, {
-//           opacity: 0,
-//           duration: 0.5,
-//           onComplete: () => {
-//             mainImage.src = newImage;
-//             gsap.to(mainImage, { opacity: 1, duration: 0.5 });
-//           },
-//         });
-//       }
-//     },
-//   });
-// });
-
 gsap.from(".card-box .card", {
   opacity: 0,
   duration: 2,
   delay: 1,
   stagger: 0.6,
 });
-
-
 
 const sections = document.querySelectorAll(".section");
 
@@ -351,24 +252,6 @@ sections.forEach((section, i) => {
     },
   });
 });
-// const scrollContainer = document.querySelector(".scroll-container");
-// const scrollContent = document.querySelector(".scroll-content");
-// const contentWidth = scrollContent.scrollWidth;
-// const viewportWidth = window.innerWidth;
-
-// gsap.to(scrollContent, {
-//   x: () => `-${contentWidth - viewportWidth}px`,
-//   ease: "none",
-//   scrollTrigger: {
-//     trigger: scrollContainer,
-//     start: "top",
-//     // end: () => `+=${contentWidth - viewportWidth}`,
-//     end: "bottom",
-//     pin: true,
-//     scrub: true,
-//     markers: true,
-//   },
-// });
 
 // Swiper
 let next = document.querySelector(".next");
@@ -437,5 +320,3 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
-
-

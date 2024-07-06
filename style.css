@@ -12,17 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-/* 
-#cursor {
-    height: 20px;
-    width: 20px;
-    background-color: #95c11e;
-    border-radius: 50%;
-    position: fixed;
-    z-index: 99;
-    transition: all linear 0.1s;
-}
-*/
 #blur {
   height: 200px;
   width: 200px;
@@ -31,76 +20,15 @@ body {
   border-radius: 50%;
   position: fixed;
   filter: blur(60px);
-  /* z-index: 1; */
   transition: all linear;
 }
-/*
-#blur2 {
-    height: 300px;
-    width: 300px;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0.4;
-    border-radius: 50%;
-    position: fixed;
-    filter: blur(80px);
-    z-index: 9;
-    transition: all linear 0.4s;
-}
-#blur3 {
-    height: 500px;
-    width: 500px;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0.7;
-    border-radius: 50%;
-    position: fixed;
-    filter: blur(80px);
-    z-index: 9;
-    transition: all linear 0.4s;
-}
-#blur4 {
-    height: 700px;
-    width: 700px;
-    background-color: rgba(0, 0, 0, 0.3);
-    opacity: 0.8;
-    border-radius: 50%;
-    position: fixed;
-    filter: blur(80px);
-    z-index: 9;
-    transition: all linear 0.4s;
-}
-#blur5 {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.115);
-    opacity: 0.9;
-    border-radius: 50%;
-    position: fixed;
-    filter: blur(80px);
-    z-index: 9;
-    transition: all linear 0.4s;
-} */
-/* nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-} */
 .nav-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: #161616; */
 }
-
-/* nav {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-  } */
 
 .hover-this {
   transition: all 0.3s ease;
@@ -153,84 +81,20 @@ nav span {
 
 #nav {
   text-align: center;
-  /* margin: 0 auto;  */
-  /* background-color: RGB(255 199 44); */
-  /* background-color: #1e1c1d; */
-  /* background: linear-gradient(to right, #f9d819 50.67%, #1e1c1d 50%); */
   background-color: transparent;
   backdrop-filter: blur(30px);
-  /* background:linear-gradient(to bottom black, yellow) ; */
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.01)); */
   opacity: 1;
-  /* padding: 1em; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* padding-top: 2vh; */
   position: fixed;
   top: 0;
   z-index: 100;
 }
 
 #main {
-  /* height: 100%; */
   background-color: #020304;
-}
-
-/* .sb {
-    position: relative;
-    top: 20px;
-    left: 180px;
-    transform: translate(-50%, -50%);
-    background: black;
-    height: 50px;
-    border-radius: 50px;
-    /* padding: px; */
-*/
-/* .search-bt {
-    color: white;
-    float: right;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 2s;
-} */
-
-/* .fa-search {
-    background: black;
-    font-size: 24px;
-}
-
-.search-i {
-    border: none;
-    background: none;
-    outline: none;
-    float: left;
-    padding: 0;
-    color: white;
-    font-size: 20px;
-    transition: 0.4s;
-    line-height: 50px;
-    width: 0;
-} */
-
-/* .sb:hover>.search-i {
-    width: 250px;
-    padding: 0 7px;
-} */
-
-#nam {
-  margin-right: 20px;
-}
-
-#nam h1 {
-  font-size: 3vw;
-  font-family: Croissant One;
 }
 
 #logo img {
@@ -252,10 +116,6 @@ nav span {
   display: flex;
 }
 
-/* #nav-links li {
-  margin-right: 20px;
-} */
-
 #nav-links a {
   color: #fff;
   text-decoration: none;
@@ -267,36 +127,57 @@ nav span {
   color: #ccc;
 }
 
-#social-media {
-  margin-left: 20px;
-}
-
-#social-media a {
-  font-size: 24px;
-  margin-right: 10px;
-  color: #fff;
-}
-
 #menu-toggle {
   display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
+#menu-toggle .bar1,
+#menu-toggle .bar2,
+#menu-toggle .bar3 {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+  #menu-toggle {
+    display: flex;
+  }
+
+  .nav-wrapper {
+    display: none;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .nav-wrapper.active {
+    display: flex;
+  }
+
+  .hover-this {
+    width: 100%;
+    padding: 20px 0;
+    display: block;
+    text-align: center;
+  }
+}
 .landing-page {
   position: relative;
   z-index: 10;
   height: 100vh;
   width: 100%;
-  /* background-image: url("https://img.freepik.com/free-photo/ingredients-near-pizza_23-2147772081.jpg?t=st=1719941393~exp=1719944993~hmac=783440f07b0a400c640364c4355847d6da705c109b5d25d6d387b4dbeefdce25&w=826"); */
   background-size: cover;
-  /* background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-  /* background-image: url(https://images.playground.com/3aaecdd0afa74d1ba8015290ae11a8ad.jpeg ); */
   background-position: center;
   background-image: url(https://images.playground.com/e52d5913f9004b8ca7551dc6e388cfef.jpeg);
 }
 
 #name {
-  /* background-color: #fff; */
-  /* top: 250px; */
   padding-top: 180px;
   padding-left: 16px;
   height: 210px;
@@ -306,9 +187,6 @@ nav span {
   justify-content: left;
   flex-direction: column;
   gap: 40px;
-
-  /* justify-content: center; */
-  /* text-align: center; */
 }
 
 .text {
@@ -320,7 +198,6 @@ nav span {
 }
 
 #name h1 {
-  /* color: RGB(255 199 44); */
   color: #000;
   font-size: 65px;
   font-family: Croissant One;
@@ -331,22 +208,18 @@ nav span {
 }
 
 #history {
-  /* background-color: #1e1c1d; */
   position: relative;
   top: 30px;
-  /* left: px; */
   color: #000;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* justify-content: center; */
   text-align: left;
   height: 300px;
   width: 400px;
   font-size: 24px;
   font-weight: bold;
-  /* font-family: "Russo One", sans-serif; */
 }
 
 #name h1 {
@@ -3213,9 +3086,6 @@ h2 span {
   width: 100% !important;
   z-index: 30;
   position: absolute;
-}
-.last img {
-  object-fit: cover;
 }
 .center {
   top: 8%;
