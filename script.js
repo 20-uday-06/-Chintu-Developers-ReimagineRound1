@@ -412,3 +412,15 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
+// gsap.to(".mc-coy", {
+//   // opacity: 1,
+//   scrollTrigger: {
+//     trigger: ".mc-coy",
+//     scroller: "body",
+//     // markers: true,
+//     start: "top -25%",
+//     end: "top -70%",
+//     scrub: 2,
+//   },
+// });
