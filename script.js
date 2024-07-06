@@ -28,7 +28,7 @@ const preloaderFunction = () => {
   tl.to(
     "#preloader",
     {
-      backgroundColor: "#D90008", // Change background color to black
+      backgroundColor: "#FF0100", // Change background color to black
       duration: 0.5,
     },
     "-=0.5"
@@ -38,8 +38,8 @@ const preloaderFunction = () => {
     {
       opacity: 1,
       y: -30,
-      duration: 1.7,
-      stagger: 0.5,
+      duration: 1,
+      stagger: 0.4,
       // color: yellow,
     },
     "same"
@@ -48,8 +48,8 @@ const preloaderFunction = () => {
     {
       opacity: 1,
       y: -30,
-      duration: 1.7,
-      stagger: -0.5,
+      duration: 1,
+      stagger: -0.4,
       // color: yellow,
     },
     "same"
@@ -94,10 +94,14 @@ const preloaderFunction = () => {
     opacity: 0,
     duration: 1.5,
   });
-  tl.from("#name button", {
-    opacity: 0,
-    duration: 1,
-  });
+  tl.from(
+    "#name button",
+    {
+      opacity: 0,
+      duration: 0.5,
+    },
+    "-=0.5"
+  );
 };
 window.addEventListener("load", preloaderFunction);
 
@@ -364,3 +368,35 @@ window.onscroll = () => {
     }
   });
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper(".swiper-container", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      slideChangeTransitionEnd: function () {
+        const slides = document.querySelectorAll(".swiper-slide img");
+        gsap.to(slides, {
+          rotation: 0,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+        gsap.to(this.slides[this.activeIndex].querySelector("img"), {
+          rotation: 10,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      },
+      slideChangeTransitionStart: function () {
+        gsap.to(this.slides[this.previousIndex].querySelector("img"), {
+          rotation: -10,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      },
+    },
+  });
+});
