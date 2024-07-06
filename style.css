@@ -161,13 +161,13 @@ nav span {
   backdrop-filter: blur(30px);
   /* background:linear-gradient(to bottom black, yellow) ; */
   /* background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.01)); */
-  opacity: 0.9;
+  opacity: 1;
   /* padding: 1em; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 2vh;
+  /* padding-top: 2vh; */
   position: fixed;
   top: 0;
   z-index: 100;
@@ -238,8 +238,11 @@ nav span {
   height: 40px;
 }
 #logo h1 {
+  padding-left: 1vw;
   font-size: 4vw;
   font-family: Croissant One;
+  opacity: 1;
+  z-index: 150;
 }
 
 #nav-links ul {

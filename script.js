@@ -28,7 +28,7 @@ const preloaderFunction = () => {
   tl.to(
     "#preloader",
     {
-      backgroundColor: "#FF0100", // Change background color to black
+      backgroundColor: "#FF0100", // Change background color to mehroom
       duration: 0.5,
     },
     "-=0.5"
@@ -107,9 +107,9 @@ window.addEventListener("load", preloaderFunction);
 
 // window.addEventListener("load", preloaderFunction);
 
-function myFunction(x) {
-  x.classList.toggle("change");
-}
+// function myFunction(x) {
+//   x.classList.toggle("change");
+// }
 // var crsr = document.querySelector("#cursor");
 var blur = document.querySelector("#blur");
 // var blur2 = document.querySelector("#blur2");
@@ -204,6 +204,18 @@ gsap.from("#popup h1", {
   },
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const logoH1 = document.querySelector("#logo h1");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      // Change this value to control when the color change happens
+      logoH1.style.color = "#ffbb0e"; // New color when scrolled
+    } else {
+      logoH1.style.color = "black"; // Original color
+    }
+  });
+});
 var h4all = document.querySelectorAll("#nav");
 h4all.forEach(function (elem) {
   elem.addEventListener("mouseenter", function () {
@@ -218,9 +230,9 @@ h4all.forEach(function (elem) {
   });
 });
 gsap.to("#nav", {
-  backgroundColor: "#000",
+  backgroundColor: "#FF0100",
   duration: 0.5,
-  height: "110px",
+  // height: "110px",
   scrollTrigger: {
     trigger: "#nav",
     scroller: "body",
