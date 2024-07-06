@@ -159,7 +159,7 @@ gsap.from(".promo-container", {
   scrollTrigger: {
       trigger: ".promo-container",
       scroller: window, 
-      markers: true,
+      // markers: true,
       start: "top -8300px",
       end: "top -8900px",
       scrub: 2,
@@ -209,7 +209,7 @@ gsap.from("#colon2", {
   y: 70,
   x: 70,
   scrollTrigger: {
-    trigger: "#colon2",
+    trigger: "#colon1",
     scroller: "body",
     // markers:true,
     start: "top 55%",
